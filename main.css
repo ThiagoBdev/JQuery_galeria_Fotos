@@ -1,0 +1,88 @@
+*{
+    margin: 0;  /*reseta margin e padding que ja existia antes*/
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif; /*todas as letras terão essas duas fontes*/
+}
+
+header {
+    background-color: #005bc5;
+    padding: 16px 0;  /* o espaçamento fica no topo e inferior de 16pixel e 0 na lateral*/
+    color: floralwhite; 
+    display: flex; /*deixa o botão ao lado do titulo*/
+    border-bottom: 16px solid #012677; /*adiciona uma borda em baixo do header*/
+    justify-content: center; /*deixa o conteudo centralizado*/
+    text-transform: uppercase; /*deixa o texto em capslock*/
+    font-style: italic; /*deixa o estilo da fonte em italico*/
+
+}
+
+header button{
+    margin-left: 16px;
+}
+
+form{
+    background-color: #c8d6e5;
+    padding: 24px 0; /* o espaçamento fica no topo e inferior de 24pixel e 0 na lateral*/
+    text-align: center; /*deixa o texto centralizado*/
+    display: none;
+}
+
+form h2{
+    margin-bottom: 16px;
+}
+
+input, button{
+    padding: 8px; /*aumenta o espaçamento do input e do botão*/
+}
+
+button{
+    background-color: #009432; 
+    border: none; /*remove a borda do botão*/
+    cursor:pointer; /*adiciona o cursor ao passar o mouse*/
+    font-weight: bold; /*deixa a fonte em negrito*/
+    text-transform: uppercase; /*deixa o texto em capslock*/
+    color: #fff;
+}
+
+#botão-cancelar{
+    background-color: red;
+}
+
+ul{
+    display: flex; /*mostra os elementos um ao lado do outro */
+    flex-wrap: wrap; /*quando chegar ao final da tela, cria-se uma nova linha*/
+}
+
+ul li{
+    max-width: 25%; /*largura maxima dos itens, nesse caso seria 25% de 100%*/
+    list-style: none;/*remove os pontinhos da lista*/
+    position: relative;
+    max-height: 250px;
+    overflow-y: hidden; /*todo o conteudo que ultrapassar o limite será escondido*/
+}
+
+ul li img{
+    width: 100%; /*largura maxima*/
+    
+}
+
+.overlay-imagem-link {
+    padding: 16px; /*aumenta o espaçamento*/
+    background-color: rgba(0,0,0,0.7); /*rgba seria para dar transparência ao elemento, sendo os 3 primeiros numeros definindo a cor e o ultimo definindo a transparência*/
+    position: absolute; /*posiciona o elemento ao canto inferior*/
+    bottom: 0; /*posiciona em baixo*/
+    left: 0; 
+    width: 100%;
+    opacity: 0; /*deixa o elemento transparente*/
+    transition: all ease .5s; /*faz a transição de aparecer o elemento em 5s*/
+}
+
+.overlay-imagem-link a{
+    color: #fff; /*deixa as letras brancas*/
+    text-decoration: none; /*remove o underline dos links */
+}
+
+ul li:hover .overlay-imagem-link {
+    opacity: 1; /*faz com que o elemento volte da transparencia*/
+}
